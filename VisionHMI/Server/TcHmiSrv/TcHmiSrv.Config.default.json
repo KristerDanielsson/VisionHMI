@@ -2747,6 +2747,23 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.MAIN.FindContoursByColour.aRectangleUt": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::FindContoursByColour::aRectangleUt",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:server#/definitions/PLC1.VN.TcVnRectangle_UDINT"
+                    },
+                    {
+                        "propertyOrder": 47
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
         "PLC1.MAIN.FindContoursByColour.aRotatedRectangle": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -3773,6 +3790,7 @@
                 "PLC1.MAIN.FindContoursByColour.aColorHi": 3,
                 "PLC1.MAIN.FindContoursByColour.aColorLow": 3,
                 "PLC1.MAIN.FindContoursByColour.aRectangle": 3,
+                "PLC1.MAIN.FindContoursByColour.aRectangleUt": 3,
                 "PLC1.MAIN.FindContoursByColour.aRotatedRectangle": 3,
                 "PLC1.MAIN.FindContoursByColour.ipImageInDisp.bmp": 3,
                 "SetLocale": 3,

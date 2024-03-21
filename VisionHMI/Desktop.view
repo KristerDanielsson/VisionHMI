@@ -2,7 +2,7 @@
   <div id="ViewDesktopBeckhoffLogo" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-src="Images/Beckhoff_Logo.svg" data-tchmi-left="20" data-tchmi-top="20" data-tchmi-width="194" data-tchmi-height="57">
 
   </div>
-<div id="TcHmiVnImage" data-tchmi-type="TcHmi.Controls.Beckhoff.Vision.TcHmiVnImage" data-tchmi-data-rate="0" data-tchmi-data-received="0" data-tchmi-draggable="true" data-tchmi-height="761" data-tchmi-height-unit="px" data-tchmi-image-rate="0" data-tchmi-image-render-time="0" data-tchmi-images-received="0" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-scalable="true" data-tchmi-scale="100" data-tchmi-scale-max="250" data-tchmi-scale-min="10" data-tchmi-top="128" data-tchmi-top-unit="px" data-tchmi-width="847" data-tchmi-width-unit="px" data-tchmi-image="%s%PLC1.MAIN.FindContoursByColour.ipImageInDisp.bmp%/s%" data-tchmi-scale-reference="ControlSize" data-tchmi-shape-type="Rectangle" data-tchmi-shape-is-rotatable="false">
+<div id="TcHmiVnImage" data-tchmi-type="TcHmi.Controls.Beckhoff.Vision.TcHmiVnImage" data-tchmi-data-rate="0" data-tchmi-data-received="0" data-tchmi-draggable="true" data-tchmi-height="761" data-tchmi-height-unit="px" data-tchmi-image-rate="0" data-tchmi-image-render-time="0" data-tchmi-images-received="0" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-scalable="true" data-tchmi-scale="100" data-tchmi-scale-max="250" data-tchmi-scale-min="10" data-tchmi-top="128" data-tchmi-top-unit="px" data-tchmi-width="847" data-tchmi-width-unit="px" data-tchmi-image="%s%PLC1.MAIN.FindContoursByColour.ipImageInDisp.bmp%/s%" data-tchmi-scale-reference="ControlSize" data-tchmi-shape-type="Ellipse" data-tchmi-shape-is-rotatable="false">
 <script data-tchmi-target-attribute="data-tchmi-offset" type="application/json">
 [
   0,
@@ -51,6 +51,45 @@
   "downloadButtonVisible": true
 }
 </script>
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiVnImage.onMouseDoubleClick",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.MAIN.FindContoursByColour.aRectangle%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%f%TcHmi.Functions.Beckhoff.Vision.ToUprightRectangle(%ctrl%TcHmiVnImage::ShapeData%/ctrl%)%/f%"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiVnImage.onShapeConfirmed",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.MAIN.FindContoursByColour.aRectangle%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%f%TcHmi.Functions.Beckhoff.Vision.ToUprightRectangle(%ctrl%TcHmiVnImage::ShapeData%/ctrl%)%/f%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
 </div>
 <div id="TcHmiVnColor" data-tchmi-type="TcHmi.Controls.Beckhoff.Vision.TcHmiVnColor" data-tchmi-height="170" data-tchmi-height-unit="px" data-tchmi-left="885" data-tchmi-left-unit="px" data-tchmi-top="138" data-tchmi-top-unit="px" data-tchmi-width="357" data-tchmi-width-unit="px" data-tchmi-color-symbol="%s%PLC1.MAIN.FindContoursByColour.aColorHi%/s%">
 <script data-tchmi-target-attribute="data-tchmi-box-color-conversion" type="application/json">
@@ -84,7 +123,7 @@
 </script>
 
 </div>
-<div id="TcHmiButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="691" data-tchmi-left-unit="px" data-tchmi-text="Button" data-tchmi-top="42" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+<div id="TcHmiButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="659" data-tchmi-left-unit="px" data-tchmi-top="166" data-tchmi-top-unit="px" data-tchmi-width="162" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text="Read Marking Coordinates">
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
@@ -93,33 +132,23 @@
     "actions": [
       {
         "objectType": "WriteToSymbol",
-        "active": false,
+        "active": true,
         "symbolExpression": "%s%PLC1.MAIN.FindContoursByColour.aRectangle%/s%",
         "value": {
           "objectType": "Symbol",
           "valueType": "tchmi:general#/definitions/String",
-          "symbolExpression": "%f%TcHmi.Functions.Beckhoff.Vision.ToUprightRectangle(%i%ShapeData%/i%)%/f%"
-        },
-        "asyncWait": true
-      },
-      {
-        "objectType": "WriteToSymbol",
-        "active": false,
-        "symbolExpression": "%s%PLC1.MAIN.FindContoursByColour.aRectangle%/s%",
-        "value": {
-          "objectType": "StaticValue",
-          "valueType": "tchmi:server#/definitions/PLC1.VN.TcVnRectangle_UDINT",
-          "value": null
+          "symbolExpression": "%f%TcHmi.Functions.Beckhoff.Vision.ToUprightRectangle(%ctrl%TcHmiVnImage::ShapeData%/ctrl%)%/f%"
         },
         "asyncWait": true
       },
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%s%PLC1.MAIN.FindContoursByColour.aRectangle%/s%",
+        "symbolExpression": "%s%PLC1.MAIN.FindContoursByColour.aRotatedRectangle%/s%",
         "value": {
-          "objectType": "FunctionExpression",
-          "functionExpression": "\"TcHmi.Functions.Beckhoff.Vision.ToUprightRectangle(%i%ShapeData%/i%)\""
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%f%%ctrl%TcHmiVnImage::ShapeData%/ctrl%%/f%"
         },
         "asyncWait": true
       }
@@ -140,30 +169,9 @@
         "active": true,
         "symbolExpression": "%i%ShapeData%/i%",
         "value": {
-          "objectType": "StaticValue",
-          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.Vision.TcVnRotatedRectangle",
-          "value": {
-            "aCenter": [
-              120.0,
-              450.0
-            ],
-            "fAngle": 123.0,
-            "stSize": {
-              "fHeight": 25.0,
-              "fWidth": 35.0
-            }
-          }
-        },
-        "asyncWait": true
-      },
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%ctrl%TcHmiButton_1::Text%/ctrl%",
-        "value": {
           "objectType": "Symbol",
           "valueType": "tchmi:general#/definitions/String",
-          "symbolExpression": "%i%ShapeData::aCenter[0]%/i%"
+          "symbolExpression": "%s%PLC1.MAIN.FindContoursByColour.aRectangleUt%/s%"
         },
         "asyncWait": true
       }
