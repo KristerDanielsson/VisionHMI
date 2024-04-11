@@ -2789,6 +2789,16 @@
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BINARY"
             },
+            "USEMAPPING": false
+        },
+        "PLC1.MAIN.FindContoursByColour.ipImageInDisp.png": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiVision",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::FindContoursByColour::ipImageInDisp::png",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BINARY"
+            },
             "USEMAPPING": true
         },
         "RefreshDefinitions": {
@@ -3793,6 +3803,7 @@
                 "PLC1.MAIN.FindContoursByColour.aRectangleUt": 3,
                 "PLC1.MAIN.FindContoursByColour.aRotatedRectangle": 3,
                 "PLC1.MAIN.FindContoursByColour.ipImageInDisp.bmp": 3,
+                "PLC1.MAIN.FindContoursByColour.ipImageInDisp.png": 3,
                 "SetLocale": 3,
                 "SubscribeEvents": 3,
                 "TcHmiSqliteLogger.Diagnostics": 1,
