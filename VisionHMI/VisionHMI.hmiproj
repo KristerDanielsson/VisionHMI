@@ -30,11 +30,11 @@
     <HmiCommunicationRouterPort>10108</HmiCommunicationRouterPort>
     <HmiCommunicationServerAuthPort>13000</HmiCommunicationServerAuthPort>
     <HmiInitial>1.12.760.48</HmiInitial>
-    <HmiRecent>1.12.760.48</HmiRecent>
+    <HmiRecent>1.12.760.59</HmiRecent>
     <HmiServerNodeAdvancedView>False</HmiServerNodeAdvancedView>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PinVersion>True (Version 1.12.760.48)</PinVersion>
+    <PinVersion>True (Version 1.12.760.59)</PinVersion>
     <HmiCfgWindowBringIntoViewAutomatically>True</HmiCfgWindowBringIntoViewAutomatically>
   </PropertyGroup>
   <PropertyGroup>
@@ -114,6 +114,11 @@
   <Target Name="Clean" DependsOnTargets="$(CleanDependsOn)" />
   <Target Name="ReBuild" DependsOnTargets="Clean; Build" />
   <ItemGroup>
+    <Folder Include="App_Plugins\" />
+    <Folder Include="App_Plugins\ColorPickerU8\" />
+    <Folder Include="App_Plugins\ColorPickerU8\lib\" />
+    <Folder Include="App_Plugins\ColorPickerU8\lib\prevalue\" />
+    <Folder Include="App_Plugins\ColorPickerU8\lib\spectrum\" />
     <Folder Include="Fonts\" />
     <Folder Include="Images" />
     <Folder Include="Images\Manifest" />
@@ -133,6 +138,24 @@
     <Folder Include="Properties" />
     <Content Include=".eslintrc.json">
       <Visible>false</Visible>
+    </Content>
+    <Content Include="App_Plugins\ColorPickerU8\ColorPicker.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Plugins\ColorPickerU8\ColorPickerController.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Plugins\ColorPickerU8\lib\prevalue\preferredFormat.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Plugins\ColorPickerU8\lib\spectrum\spectrum.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Plugins\ColorPickerU8\lib\spectrum\spectrum.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App_Plugins\ColorPickerU8\package.manifest">
+      <SubType>Content</SubType>
     </Content>
     <Content Include="Content1.content">
       <SubType>Content</SubType>

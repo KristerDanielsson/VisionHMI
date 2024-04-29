@@ -50,6 +50,21 @@
       "name": "Fonts/Fonts.css",
       "description": "",
       "type": "Stylesheet"
+    },
+    {
+      "name": "App_Plugins/ColorPickerU8/lib/spectrum/spectrum.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "App_Plugins/ColorPickerU8/ColorPickerController.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "App_Plugins/ColorPickerU8/lib/spectrum/spectrum.css",
+      "description": "",
+      "type": "Stylesheet"
     }
   ],
   "userControls": [],
