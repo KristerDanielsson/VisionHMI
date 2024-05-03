@@ -278,7 +278,7 @@
       &quot;color&quot;: &quot;rgba(90, 90, 90, 1)&quot;
     },
     &quot;float&quot;: false,
-    &quot;maxValue&quot;: 180.0
+    &quot;maxValue&quot;: 255.0
   },
   {
     &quot;color&quot;: {
@@ -319,7 +319,7 @@
       &quot;color&quot;: &quot;rgba(90, 90, 90, 1)&quot;
     },
     &quot;float&quot;: false,
-    &quot;maxValue&quot;: 180.0
+    &quot;maxValue&quot;: 255.0
   },
   {
     &quot;color&quot;: {
